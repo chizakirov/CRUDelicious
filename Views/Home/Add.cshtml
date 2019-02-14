@@ -1,0 +1,51 @@
+﻿@model Dish
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a new dish</h1>
+    <a href = "/">Home</a>
+    <div>
+        <form asp-action="AddDish" asp-controller="Home" method="post">
+            <span class="text-danger" asp-validation-for="ChefName"></span>
+            <label asp-for="ChefName">Chef's Name</label>
+            <input asp-for="ChefName">
+            <br>
+            <br>
+            <span class="text-danger" asp-validation-for="DishName"></span>
+            <label asp-for="DishName">Dish Name</label>
+            <input asp-for="DishName">
+            <br>
+            <br>
+            <span class="text-danger" asp-validation-for="Calories"></span>
+            <label asp-for="Calories"># of Calories</label>
+            <input asp-for="Calories">
+            <br>
+            <br>
+            <span class="text-danger" asp-validation-for="Tastiness"></span>
+            <label asp-for="Tastiness">Tastiness</label>
+            <select asp-for="Tastiness">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <br>
+            <span class="text-danger" asp-validation-for="Desc"></span>
+            <label asp-for="Desc">Desc</label>
+            <textarea asp-for="Desc"></textarea>
+            <br>
+            <br>
+            <input value = "Add Dish" type = "submit">
+        </form>
+    </div>
+</body>
+</html>

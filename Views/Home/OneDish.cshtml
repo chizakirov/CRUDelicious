@@ -1,0 +1,22 @@
+﻿@model Dish;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>@ViewBag.onedish.DishName</h1>
+   <h4>@ViewBag.onedish.ChefName</h4>
+   <a href = "/">Home</a>
+   <hr>
+   <p>@ViewBag.onedish.Desc</p>
+   <p>Calories: @ViewBag.onedish.Calories</p>
+    <p>Tastiness: @ViewBag.onedish.Tastiness</p>
+    <a href = "/delete/@ViewBag.onedish.DishId">Delete</a>
+    | <a href = "/edit/@ViewBag.onedish.DishId">Edit Dish</a>
+</body>
+</html>

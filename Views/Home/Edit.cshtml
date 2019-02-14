@@ -1,0 +1,50 @@
+﻿@model Dish
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit </h1>
+    <a href = "/">Home</a>
+
+    <hr>
+    <form asp-action="ProcessEdit" asp-route-id="@ViewBag.onedish.DishId" asp-controller="Home" method="post">
+        <span class="text-danger" asp-validation-for="ChefName"></span>
+        <label asp-for="ChefName">Chef's Name</label>
+        <input asp-for="ChefName" placeholder="@ViewBag.onedish.ChefName">
+        <br>
+        <br>
+        <span class="text-danger" asp-validation-for="DishName"></span>
+        <label asp-for="DishName">Dish Name</label>
+        <input asp-for="DishName" placeholder="@ViewBag.onedish.DishName">
+        <br>
+        <br>
+        <span class="text-danger" asp-validation-for="Calories"></span>
+        <label asp-for="Calories"># of Calories</label>
+        <input asp-for="Calories" placeholder="@ViewBag.onedish.Calories">
+        <br>
+        <br>
+        <span class="text-danger" asp-validation-for="Tastiness"></span>
+        <label asp-for="Tastiness">Tastiness</label>
+        <select asp-for="Tastiness" placeholder="@ViewBag.onedish.Tastiness">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br>
+        <br>
+        <span class="text-danger" asp-validation-for="Desc"></span>
+        <label asp-for="Desc">Desc</label>
+        <textarea asp-for="Desc" placeholder="@ViewBag.onedish.Desc"></textarea>
+        <br>
+        <br>
+        <input value = "Update Dish" type = "submit">
+    </form>
+</body>
+</html>
